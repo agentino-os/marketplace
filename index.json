@@ -1,0 +1,267 @@
+{
+  "version": 1,
+  "updated_at": "2026-04-23T10:38:38+00:00",
+  "skills": [
+    {
+      "name": "video-bgmusic",
+      "repo": "dagoSte/agentino-skill-video-bgmusic",
+      "description": "Mix a music bed under an existing video with automatic ducking — the music drops when narration is present and comes back when the voice pauses. Pure ffmpeg sidechain compression.",
+      "author": "Agentino",
+      "tags": [
+        "video",
+        "audio",
+        "music",
+        "ducking",
+        "ffmpeg",
+        "marketplace"
+      ],
+      "license": "MIT",
+      "latest_version": "1.0.0",
+      "versions": [
+        "1.0.0"
+      ]
+    },
+    {
+      "name": "video-brief",
+      "repo": "dagoSte/agentino-skill-video-brief",
+      "description": "Build an LLM-readable brief of a video: metadata, silence gaps, scene changes, sampled thumbnails — everything a model needs to reason about the content without watching a single frame. No LLM or cloud API used.",
+      "author": "Agentino",
+      "tags": [
+        "video",
+        "media",
+        "ffmpeg",
+        "llm-input",
+        "marketplace"
+      ],
+      "license": "MIT",
+      "latest_version": "1.0.0",
+      "versions": [
+        "1.0.0"
+      ]
+    },
+    {
+      "name": "video-captions-burn",
+      "repo": "dagoSte/agentino-skill-video-captions-burn",
+      "description": "Burn SRT/VTT subtitles directly into the video stream with configurable font, colour, outline and position. One ffmpeg pass, pure local.",
+      "author": "Agentino",
+      "tags": [
+        "video",
+        "media",
+        "captions",
+        "subtitles",
+        "ffmpeg",
+        "marketplace"
+      ],
+      "license": "MIT",
+      "latest_version": "1.0.0",
+      "versions": [
+        "1.0.0"
+      ]
+    },
+    {
+      "name": "video-chapters",
+      "repo": "dagoSte/agentino-skill-video-chapters",
+      "description": "Add YouTube/QuickTime chapter markers to an existing MP4 — no re-encode, just metadata. Chapters show up as a timeline scrubber in every modern player and video platform.",
+      "author": "Agentino",
+      "tags": [
+        "video",
+        "metadata",
+        "chapters",
+        "youtube",
+        "ffmpeg",
+        "marketplace"
+      ],
+      "license": "MIT",
+      "latest_version": "1.0.0",
+      "versions": [
+        "1.0.0"
+      ]
+    },
+    {
+      "name": "video-concat",
+      "repo": "dagoSte/agentino-skill-video-concat",
+      "description": "Concatenate N video clips into one MP4, normalising resolution/fps and optionally adding a crossfade between each pair. One ffmpeg pass.",
+      "author": "Agentino",
+      "tags": [
+        "video",
+        "media",
+        "concat",
+        "ffmpeg",
+        "marketplace"
+      ],
+      "license": "MIT",
+      "latest_version": "1.0.0",
+      "versions": [
+        "1.0.0"
+      ]
+    },
+    {
+      "name": "video-cut-silences",
+      "repo": "dagoSte/agentino-skill-video-cut-silences",
+      "description": "Remove silence gaps from a video, keeping only the speech. Accepts the silence_gaps list from video-brief or auto-detects on the fly via ffmpeg silencedetect. Output is a re-encoded MP4 with micro-fades at every cut so you never hear a pop.",
+      "author": "Agentino",
+      "tags": [
+        "video",
+        "media",
+        "ffmpeg",
+        "marketplace"
+      ],
+      "license": "MIT",
+      "latest_version": "1.0.0",
+      "versions": [
+        "1.0.0"
+      ]
+    },
+    {
+      "name": "video-image-from-prompt",
+      "repo": "dagoSte/agentino-skill-video-image-from-prompt",
+      "description": "Generate a still image from a text prompt. Supports native OpenAI Images (gpt-image-1 / dall-e-3) and OpenRouter multimodal chat (Gemini Flash Image, Flux, etc.). Designed as the generative source for video-slideshow pipelines.",
+      "author": "Agentino",
+      "tags": [
+        "image",
+        "generative",
+        "ai",
+        "openai",
+        "openrouter",
+        "marketplace"
+      ],
+      "license": "MIT",
+      "latest_version": "1.1.0",
+      "versions": [
+        "1.1.0"
+      ]
+    },
+    {
+      "name": "video-intro-outro",
+      "repo": "dagoSte/agentino-skill-video-intro-outro",
+      "description": "Prepend an intro clip and/or append an outro clip to an existing video, with a smooth crossfade at every join. Auto-normalises resolution / fps / codec so branded intros shot at different specs slot in cleanly.",
+      "author": "Agentino",
+      "tags": [
+        "video",
+        "media",
+        "intro",
+        "outro",
+        "branding",
+        "ffmpeg",
+        "marketplace"
+      ],
+      "license": "MIT",
+      "latest_version": "1.0.0",
+      "versions": [
+        "1.0.0"
+      ]
+    },
+    {
+      "name": "video-lowerthirds",
+      "repo": "dagoSte/agentino-skill-video-lowerthirds",
+      "description": "Overlay timed text bands (lower-thirds, chapter markers, speaker names, call-outs) on a video with configurable position, font, colour, and semi-transparent background box. One ffmpeg pass.",
+      "author": "Agentino",
+      "tags": [
+        "video",
+        "text",
+        "overlay",
+        "lower-thirds",
+        "ffmpeg",
+        "marketplace"
+      ],
+      "license": "MIT",
+      "latest_version": "1.0.0",
+      "versions": [
+        "1.0.0"
+      ]
+    },
+    {
+      "name": "video-pip",
+      "repo": "dagoSte/agentino-skill-video-pip",
+      "description": "Overlay a second video as a picture-in-picture inset on a main video — classic tutorial webcam overlay, reaction video, multi-cam. Configurable position, scale, and audio mixing.",
+      "author": "Agentino",
+      "tags": [
+        "video",
+        "composition",
+        "pip",
+        "overlay",
+        "ffmpeg",
+        "marketplace"
+      ],
+      "license": "MIT",
+      "latest_version": "1.0.0",
+      "versions": [
+        "1.0.0"
+      ]
+    },
+    {
+      "name": "video-slideshow",
+      "repo": "dagoSte/agentino-skill-video-slideshow",
+      "description": "Turn a list of images (and optional narration audio) into an MP4 slideshow with Ken Burns zoom and crossfade transitions. One ffmpeg pass, pure local.",
+      "author": "Agentino",
+      "tags": [
+        "video",
+        "media",
+        "slideshow",
+        "ffmpeg",
+        "marketplace"
+      ],
+      "license": "MIT",
+      "latest_version": "1.0.0",
+      "versions": [
+        "1.0.0"
+      ]
+    },
+    {
+      "name": "video-speed",
+      "repo": "dagoSte/agentino-skill-video-speed",
+      "description": "Speed up or slow down a video with optional pitch preservation on the audio track. Handles 0.25× slow-mo all the way up to 4× fast playback, breaking the audio into an atempo chain so the pitch stays natural.",
+      "author": "Agentino",
+      "tags": [
+        "video",
+        "speed",
+        "slow-motion",
+        "time-warp",
+        "ffmpeg",
+        "marketplace"
+      ],
+      "license": "MIT",
+      "latest_version": "1.0.0",
+      "versions": [
+        "1.0.0"
+      ]
+    },
+    {
+      "name": "video-storyboard-from-script",
+      "repo": "dagoSte/agentino-skill-video-storyboard-from-script",
+      "description": "Turn a narration script into a visual storyboard: an LLM decomposes it into N shots, then a generative image model renders one illustration per shot. Output is ready to feed video-slideshow.",
+      "author": "Agentino",
+      "tags": [
+        "video",
+        "generative",
+        "storyboard",
+        "llm",
+        "ai",
+        "marketplace"
+      ],
+      "license": "MIT",
+      "latest_version": "1.0.0",
+      "versions": [
+        "1.0.0"
+      ]
+    },
+    {
+      "name": "video-voiceover",
+      "repo": "dagoSte/agentino-skill-video-voiceover",
+      "description": "Turn a script into a narrated WAV + synced SRT. Works offline with macOS `say` or local `piper`; falls back to `edge-tts` for neural voices. Built to feed video-slideshow + video-captions-burn.",
+      "author": "Agentino",
+      "tags": [
+        "video",
+        "audio",
+        "tts",
+        "narration",
+        "marketplace"
+      ],
+      "license": "MIT",
+      "latest_version": "1.0.0",
+      "versions": [
+        "1.0.0"
+      ]
+    }
+  ]
+}
