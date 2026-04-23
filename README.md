@@ -1,10 +1,10 @@
-# dagoSte/marketplace — Agentino skill registry (provisional)
+# agentino-os/marketplace — official Agentino skill registry
 
-This repo is an **interim registry** for Agentino marketplace skills while the canonical [`agentino/marketplace`](https://github.com/agentino) organisation registry is still being set up.
+This repo is the **canonical registry** for Agentino marketplace skills. The Agentino CLI (`agentino/skills/github.py`) defaults to `agentino-os/marketplace` — users don't need to configure anything.
 
 ## What lives here
 
-`index.json` — a flat list of publicly-installable Agentino skills, each pointing at its canonical `dagoSte/agentino-skill-<name>` repo. The shape matches what the Agentino client expects in `agentino.skills.github.fetch_index()`:
+`index.json` — a flat list of publicly-installable Agentino skills, each pointing at its canonical `agentino-os/agentino-skill-<name>` repo. The shape is what the Agentino client expects in `agentino.skills.github.fetch_index()`:
 
 ```json
 {
@@ -13,7 +13,7 @@ This repo is an **interim registry** for Agentino marketplace skills while the c
   "skills": [
     {
       "name": "video-brief",
-      "repo": "dagoSte/agentino-skill-video-brief",
+      "repo": "agentino-os/agentino-skill-video-brief",
       "description": "...",
       "author": "Agentino",
       "tags": ["video", "media", "ffmpeg", "llm-input", "marketplace"],
@@ -27,19 +27,29 @@ This repo is an **interim registry** for Agentino marketplace skills while the c
 
 ## How consumers use it
 
-Point Agentino at this registry instead of the default:
+Zero configuration — the default works:
 
 ```bash
-agentino marketplace search video --registry dagoSte/marketplace
-agentino marketplace install dagoSte/agentino-skill-video-brief --registry dagoSte/marketplace
+agentino marketplace search video
+agentino marketplace install agentino-os/agentino-skill-video-brief
 ```
 
-Once `agentino/marketplace` goes live, the `--registry` flag can be dropped and every entry is expected to migrate there verbatim.
+## Overriding the registry source
 
-## Why provisional
+For private forks, local testing, or alternative registries, set the `AGENTINO_MARKETPLACE_REGISTRY` env var:
 
-The Agentino CLI code (`agentino/skills/github.py`) defaults to `agentino/marketplace` but gracefully degrades to an empty skill list when that repo doesn't exist. This provisional registry unblocks `agentino marketplace search` today without waiting on the canonical setup.
+```bash
+export AGENTINO_MARKETPLACE_REGISTRY=some-org/my-registry
+agentino marketplace search foo
+```
+
+## Contributing a skill
+
+1. Publish your skill as a public GitHub repo following the structure in [docs/skills/marketplace-guide.md](https://github.com/agentino-os/agentino/blob/main/docs/skills/marketplace-guide.md).
+2. Run `agentino marketplace publish --path skill.yaml` to generate your entry.
+3. Fork this repo, add the JSON object to the `skills` array in `index.json`.
+4. Open a pull request — the `updated_at` timestamp gets bumped on merge.
 
 ## Keeping `index.json` in sync
 
-Source of truth is each skill's `skill.yaml` `metadata` block. To add or update an entry, run `agentino marketplace publish --path <skill.yaml>` in the skill repo, copy the emitted JSON object, and drop it into the `skills` array here. The `updated_at` timestamp gets bumped on every commit.
+Source of truth is each skill's `skill.yaml` `metadata` block. Every entry must match its upstream `name`, `version`, `description`, `tags`, and `license`. Outdated entries are the most common source of "I installed but didn't get the latest version" bug reports.
