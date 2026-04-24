@@ -1,7 +1,25 @@
 {
   "version": 1,
-  "updated_at": "2026-04-23T11:22:26+00:00",
+  "updated_at": "2026-04-24T13:44:32+00:00",
   "skills": [
+    {
+      "name": "coding-agent",
+      "repo": "agentino-os/agentino-skill-coding-agent",
+      "description": "Senior-engineer-style agentic coding assistant that runs a tool-use loop inside Agentino. Uses the installed skill catalog (file-read, file-write, grep-search, run-shell, code-security-scanner, ...) as its tool set. Inspired by Claude Code's UX; see the skill README for the honest parity table vs. Claude Code itself.",
+      "author": "Stefano D'Agostino",
+      "tags": [
+        "agent",
+        "coding",
+        "tool-use",
+        "assistant",
+        "marketplace"
+      ],
+      "license": "MIT",
+      "latest_version": "1.0.0",
+      "versions": [
+        "1.0.0"
+      ]
+    },
     {
       "name": "video-bgmusic",
       "repo": "agentino-os/agentino-skill-video-bgmusic",
